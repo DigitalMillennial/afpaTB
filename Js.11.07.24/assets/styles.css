@@ -1,0 +1,16 @@
+.centered-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  flex: 3;
+  width: 300px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
