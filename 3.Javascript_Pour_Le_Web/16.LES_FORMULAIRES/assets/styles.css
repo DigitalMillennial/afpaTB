@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Adjust form labels and controls */
+body{
+padding: 0;
+}
+
+.form-group.row {
+    margin-bottom: 1rem;
+}
+
+.col-form-label {
+    text-align: left;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.container {
+    max-width: 800px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    margin-right: 0.5rem;
+}

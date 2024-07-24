@@ -1,0 +1,57 @@
+/* styles.css */
+
+/* Adjust form labels and controls */
+body{
+padding: 0;
+background-image: url("../img/19.jpg");
+background-position: center;
+background-size: cover;
+
+
+}
+
+.form-group.row {
+    margin-bottom: 1rem;
+}
+
+.col-form-label {
+    text-align: left;
+}
+
+textarea.form-control {
+    resize: none;
+}
+
+.container {
+    max-width: 800px;
+    color: rgb(250, 0, 0);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+legend {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    margin-right: 0.5rem;
+}
+.output {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    width: 100%;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    height: calc(1.5em + .75rem + 2px);
+    box-sizing: border-box;
+}

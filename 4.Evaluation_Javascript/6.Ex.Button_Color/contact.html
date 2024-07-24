@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="container text-center my-4">
+    <div>
+      <button type="button" onclick="colorch(this)" class="btn btn-red">Red</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-green">Green</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-blue">Blue</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-yellow">Yellow</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-purple">Purple</button>
+    </div>
+    <div class="mx-auto"></div>
+    <div>
+      <button type="button" onclick="colorch(this)" class="btn btn-orange">Orange</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-teal">Teal</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-pink">Pink</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-brown">Brown</button>
+      <button type="button" onclick="colorch(this)" class="btn btn-gray">Gray</button>     
+    </div>
+  </header>
+  <section class="container my-5">    
+    <hr>
+    <div class="mx-auto" style="max-width: 600px;">
+      <form action="destination.php" method="post">
+        <fieldset class="mb-4">
+          <div class="form-group">
+            <label for="question">Votre COLOR</label>
+            <div id="squere"></div>
+          </div>
+        </fieldset>                   
+      </form>
+    </div>
+    <hr>
+  </section> 
+  <footer class="text-center py-4">
+    <div class="rgb-sliders mt-4">
+      <label>Red: <input type="range" id="red" min="0" max="255" value="255"></label>
+      <label>Green: <input type="range" id="green" min="0" max="255" value="255"></label>
+      <label>Blue: <input type="range" id="blue" min="0" max="255" value="255"></label>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
