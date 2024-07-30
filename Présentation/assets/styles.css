@@ -1,102 +1,312 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  background-color: #0c0f15;
+  color: #ababab;
+}
+ul{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+}
+.menu-bar {
+  border-radius: 25px;
+  height: fit-content;
+  display: inline-flex;
+  background-color: #1e2530;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 0 10px;
+  margin: 50px 0 0 0;
 }
 
-body {
+.menu-bar li {
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 0 8px;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.menu-bar li::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+
+.menu-bar li:hover {
+  color: black;
+}
+
+.menu-bar li:hover::before {
+  background: linear-gradient(to bottom, #e8edec, #f90a23);
+  box-shadow: 0px 3px 0px 0px black;
+  transform: scale(1);
+}
+
+a {
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: #ababab;
+  text-decoration: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #1e2530;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  line-height: 1.3;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.pt-table {
+  display: table;
+  width: 100%;
+  height: calc(100vh - 4px);
+}
+
+.pt-tablecell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 17, 24, 0.97);
+}
+
+.relative {
+  position: relative;
+}
+
+.clear::before, .clear::after {
+  content: " ";
+  display: table;
+}
+
+.clear::after {
+  clear: both;
+}
+
+.hexagon-menu {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  min-width: 100%;
-  background: url('../img/nochnoeNebo.jpg');
-  background-size: cover; /* Это поможет изображению занять весь экран */
-  background-position: center; /* Центрирует изображение */
+  align-items: center;
+  justify-content: center;
 }
 
-header, footer {
-  flex: 0 0 auto;
-}
-
-section {
-  flex: 1 0 auto;
-}
-
-.navbar .container {
+.hexagon-row {
   display: flex;
-  justify-content: center; /* Центрирует содержимое контейнера */
-  align-items: stretch;
-  border: transparent;
-  
+  justify-content: center;
+  margin-bottom: -60px;
 }
 
-.navbar-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Центрирует ссылки внутри ul */
-  
-}
-.nav-link{
-  color: rgb(255, 255, 255);
-  margin-right: 30px;
-}
-nav{
-  background: rgba(0, 0, 0, 0.45);
- }
- .box {
-  margin-top: 10%;
-  border: 1px solid rgb(255, 255, 255);
-  background: rgba(0, 0, 0, 0.45);
-  height: 400px;
-  width: 250px;
-}
-.box::before {
-  content: '';
-  position: absolute; 
-  height: 400px;
-  width: 250px;
-  
-}
-.box:hover::before {
-content: '';
-position: absolute;
-background: rgba(248, 248, 248, 0.3);
-z-index: 3;
-
-}
-/*стили для  Шестигранного элемента меню*/
-.hexagon {
-  display: block;
-  width: 100px;
-  height: 58px;
-  background-color: #3498db;
-  text-align: center;
-  line-height: 58px;
-  color: white;
-  text-decoration: none;
+.hexagon-item {
+  cursor: pointer;
+  width: 200px;
+  height: 173.20508px;
   position: relative;
-  margin: 29px 0;
-  border-left: solid 1px #2980b9;
-  border-right: solid 1px #2980b9;
+  transform: rotate(30deg);
+  margin: 50px;
 }
 
-.hexagon::before,
-.hexagon::after {
+.hexagon-item:hover {
+  z-index: 1;
+}
+
+.hexagon-item:hover .hex-item:last-child {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.hexagon-item:hover .hex-item:first-child {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.hexagon-item:hover .hex-item:first-child div::before,
+.hexagon-item:hover .hex-item:first-child div::after {
+  height: 5px;
+}
+
+.hexagon-item:hover .hex-item div::before,
+.hexagon-item:hover .hex-item div::after {
+  background-color: #ff0037;
+}
+
+.hexagon-item:hover .hex-content svg {
+  transform: scale(0.97);
+}
+
+.hex-item {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 100px;
+  height: 173.20508px;
+}
+
+.hex-item:first-child {
+  z-index: 0;
+  transform: scale(0.9);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hex-item:last-child {
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 1;
+}
+
+.hex-item div {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 173.20508px;
+  transform-origin: center center;
+}
+
+.hex-item div::before, .hex-item div::after {
+  background-color: #1e2530;
   content: "";
   position: absolute;
-  width: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
+  width: 100%;
+  height: 3px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.hexagon::before {
-  bottom: 100%;
-  border-bottom: 29px solid #3498db;
+.hex-item div::before {
+  top: 0;
 }
 
-.hexagon::after {
-  top: 100%;
-  border-top: 29px solid #3498db;
+.hex-item div::after {
+  bottom: 0;
 }
-/*-------------------------------------*/
-<div class=""><a href="#" class="hexagon">Menu</a></div>
+
+.hex-item div:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.hex-item div:nth-child(2) {
+  transform: rotate(60deg);
+}
+
+.hex-item div:nth-child(3) {
+  transform: rotate(120deg);
+}
+
+.hex-content {
+  color: #fff;
+  display: block;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  transform: rotate(-30deg);
+  width: 156px;
+}
+
+.hex-content .hex-content-inner {
+  left: 50%;
+  margin: -3px 0 0 2px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hex-content .icon {
+  display: block;
+  font-size: 36px;
+  line-height: 30px;
+  margin-bottom: 11px;
+}
+
+.hex-content .title {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.hex-content svg {
+  left: -7px;
+  position: absolute;
+  top: -13px;
+  transform: scale(0.87);
+  z-index: -1;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hexagon-item:hover .icon i {
+  color: #ff0037;
+  transition: 0.6s;
+}
+
+.hexagon-item:hover .title {
+  animation: focus-in-contract 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hexagon-item {
+    float: none;
+    margin: 0 auto 50px;
+  }
+
+  .hex-item {
+    left: 0;
+    right: 0;
+  }
+}
