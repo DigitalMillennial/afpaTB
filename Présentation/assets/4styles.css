@@ -30,7 +30,7 @@ textarea.form-control {
 fieldset {
     border: 1px solid #ddd;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom:0px 0 0 1rem;
 }
 
 legend {
