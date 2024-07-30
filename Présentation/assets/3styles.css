@@ -3,6 +3,7 @@
 /* Adjust form labels and controls */
 body{
 padding: 0;
+background: #9c9999;
 }
 
 .form-group.row {

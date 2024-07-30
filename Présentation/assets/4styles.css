@@ -6,8 +6,6 @@ padding: 0;
 background-image: url("../img/19.jpg");
 background-position: center;
 background-size: cover;
-
-
 }
 
 .form-group.row {
@@ -57,6 +55,7 @@ legend {
 }
 ul{
  display: flex;
+ justify-content: center;
  margin: 0;
 }
   .menu-bar {

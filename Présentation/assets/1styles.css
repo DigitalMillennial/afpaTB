@@ -3,6 +3,7 @@
 /* Adjust form labels and controls */
 body{
 padding: 0;
+background: #9c9999;
 }
 
 .form-group.row {
@@ -10,7 +11,7 @@ padding: 0;
 }
 
 .col-form-label {
-    text-align: left;
+    text-align: leftbackground: #333;;
 }
 
 textarea.form-control {
