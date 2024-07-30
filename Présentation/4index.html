@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul du nombre de jeunes, moyens et vieux</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <section class="d-flex p-4"> </section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <section id="ageForm">
+                    <fieldset>
+                        <legend>Le montant total</legend>
+                        <div class="form-group row">
+                            <label for="PU" class="col-sm-4 col-form-label">PU:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="PU" id="PU" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="QTECOM" class="col-sm-4 col-form-label">QTECOM:</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="QTECOM" id="QTECOM" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="REM" class="col-sm-4 col-form-label">REM:</label>
+                            <div class="col-sm-8">
+                                <div class="output" id="REM"></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="PORT" class="col-sm-4 col-form-label">PORT:</label>
+                            <div class="col-sm-8">
+                                <div class="output" id="PORT"></div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="PAP" class="col-sm-4 col-form-label">PAP</label>
+                            <div class="col-sm-8">
+                                <div class="output" id="PAP"></div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary" onclick="dann()">compter</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

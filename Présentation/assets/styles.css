@@ -1,0 +1,102 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 100%;
+  background: url('../img/nochnoeNebo.jpg');
+  background-size: cover; /* Это поможет изображению занять весь экран */
+  background-position: center; /* Центрирует изображение */
+}
+
+header, footer {
+  flex: 0 0 auto;
+}
+
+section {
+  flex: 1 0 auto;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: center; /* Центрирует содержимое контейнера */
+  align-items: stretch;
+  border: transparent;
+  
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Центрирует ссылки внутри ul */
+  
+}
+.nav-link{
+  color: rgb(255, 255, 255);
+  margin-right: 30px;
+}
+nav{
+  background: rgba(0, 0, 0, 0.45);
+ }
+ .box {
+  margin-top: 10%;
+  border: 1px solid rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.45);
+  height: 400px;
+  width: 250px;
+}
+.box::before {
+  content: '';
+  position: absolute; 
+  height: 400px;
+  width: 250px;
+  
+}
+.box:hover::before {
+content: '';
+position: absolute;
+background: rgba(248, 248, 248, 0.3);
+z-index: 3;
+
+}
+/*стили для  Шестигранного элемента меню*/
+.hexagon {
+  display: block;
+  width: 100px;
+  height: 58px;
+  background-color: #3498db;
+  text-align: center;
+  line-height: 58px;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  margin: 29px 0;
+  border-left: solid 1px #2980b9;
+  border-right: solid 1px #2980b9;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hexagon::before {
+  bottom: 100%;
+  border-bottom: 29px solid #3498db;
+}
+
+.hexagon::after {
+  top: 100%;
+  border-top: 29px solid #3498db;
+}
+/*-------------------------------------*/
+<div class=""><a href="#" class="hexagon">Menu</a></div>
