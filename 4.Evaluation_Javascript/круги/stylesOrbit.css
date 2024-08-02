@@ -1,0 +1,166 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+    width: 500px;  /* уменьшаем размер контейнера */
+    height: 500px; /* уменьшаем размер контейнера */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-field {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 100%;
+    opacity: 1;
+    animation: twinkle 1.5s infinite ease-in-out;
+}
+
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100vw;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    
+    margin-top: 150px; /* добавляем отступ сверху */
+}
+
+.scrolling-text span {
+    display: inline-block;
+    text-align: center;
+    padding-left: 100%;
+    animation: scroll-left 10s linear infinite;
+    box-shadow: 0 0 70px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.central-sphere {
+    position: absolute;
+    width: 200px; /* уменьшаем размер центральной сферы */
+    height: 200px; /* уменьшаем размер центральной сферы */
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-sphere {.sky {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sky {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.meteor {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: radial-gradient(circle, #ffffff, #fffefe);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(252, 252, 252, 0.8);
+    opacity: 0.8;
+    animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.explosion {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #fffefd, #ffffff);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    opacity: 0.9;
+    animation: explode 0.5s linear forwards;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+    position: absolute;
+    width: 60px; /* уменьшаем размер маленьких сфер */
+    height: 60px; /* уменьшаем размер маленьких сфер */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    transform-origin: 250px; /* изменяем расстояние от центра для орбиты */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: orbit 10s linear infinite;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(250px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(250px) rotate(-360deg);
+    }
+}
+
+.small-sphere:nth-child(2) { animation-delay: -1.25s; }
+.small-sphere:nth-child(3) { animation-delay: -2.5s; }
+.small-sphere:nth-child(4) { animation-delay: -3.75s; }
+.small-sphere:nth-child(5) { animation-delay: -5s; }
+.small-sphere:nth-child(6) { animation-delay: -6.25s; }
+.small-sphere:nth-child(7) { animation-delay: -7.5s; }
+.small-sphere:nth-child(8) { animation-delay: -8.75s; }
+.small-sphere:nth-child(9) { animation-delay: -10s; }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Jarditou</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/stylesOrbit.css">
+  <link rel="stylesheet" href="styleS.css">
+</head>
+<body>
+  <!---->
+  <div class="globe-container">
+    <div class="globe">
+        <div class="globe-sphere"></div>
+        <div class="globe-outer-shadow"></div>
+        <div class="globe-worldmap">
+            <div class="globe-worldmap-back"></div>
+            <div class="globe-worldmap-front"></div>
+        </div>
+        <div class="globe-inner-shadow"></div>
+    </div>
+  </div>
+  </div>
+<!--Смайл-->
+<div id="container">
+  <button class="face-button">
+    <span class="face-container">
+      <span class="eye left"></span>
+      <span class="eye right"></span>
+      <span class="mouth"></span>
+    </span>
+  </button>
+</div>
+<!---->
+<!--Паучёк-->
+<canvas id="spider"></canvas>
+<!---->
+<!--Луна -->
+<div class="animation">
+  <img class="img-rotation" src="img/moon.png"/>
+</div>
+<!---->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
